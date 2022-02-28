@@ -47,6 +47,7 @@ const ViewBook = () => {
         data: currentBook,
       })
     );
+    setCurrentBook({});
     onClose();
   };
 

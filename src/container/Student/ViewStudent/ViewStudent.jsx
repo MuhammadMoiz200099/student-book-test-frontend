@@ -46,6 +46,7 @@ const ViewStudent = () => {
         data: currentStudent,
       })
     );
+    setCurrentStudent({});
     onClose();
   };
 

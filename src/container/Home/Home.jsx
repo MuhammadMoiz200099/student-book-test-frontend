@@ -2,20 +2,31 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import React from "react";
 import AlignVerticalBottomIcon from "@mui/icons-material/AlignVerticalBottom";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import PublicIcon from "@mui/icons-material/Public";
+import CodeIcon from "@mui/icons-material/Code";
+import MYPIC from "./../../assets/mypic.jpeg";
 
 const Home = () => {
   return (
-    <Box>
+    <Box
+      sx={{
+        pb: 8,
+        display: "flex",
+        gap: 10,
+        flexWrap: { xs: "wrap", sm: "wrap", md: 'nowrap', lg: 'nowrap', xl: 'nowrap' },
+        alignItems: 'center'
+      }}
+    >
       <Typography>
         <h1>Hi, I'm Muhammad Moiz Siddique</h1>
         <Typography
           sx={{
-            width: { sx: "100%", sm: "100%", md: "70%", lg: "60%", xl: "50%" },
             textAlign: "justify",
           }}
         >
@@ -33,38 +44,80 @@ const Home = () => {
         <Typography>
           <List>
             <ListItem disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  <AlignVerticalBottomIcon />
-                </ListItemIcon>
-                <ListItemText primary="Expericens: 3 years professional working experices" />
-              </ListItemButton>
+              <ListItemIcon>
+                <LinkedInIcon />
+              </ListItemIcon>
+              <ListItemText>
+                <a href="https://www.linkedin.com/in/muhammad-moiz-siddique-74419b166/">
+                  https://www.linkedin.com/in/muhammad-moiz-siddique-74419b166/
+                </a>
+              </ListItemText>
             </ListItem>
             <ListItem disablePadding>
-              <ListItemButton sx={{ display:'flex', alignItems: 'flex-start' }}>
-                <ListItemIcon>
-                  <AlignVerticalBottomIcon />
-                </ListItemIcon>
-                <Typography sx={{ display:'flex', flexDirection: 'column' }}>
-                  <ListItemText primary="Experties: " />
-                  <Typography sx={{ pl: 3 }}>
-                    <ListItemText primary="- Javascript" />
-                    <ListItemText primary="- Typescript" />
-                    <ListItemText primary="- React JS" />
-                    <ListItemText primary="- Angular JS" />
-                    <ListItemText primary="- Node JS" />
-                    <ListItemText primary="- Nest JS" />
-                    <ListItemText primary="- Mongo DB" />
-                    <ListItemText primary="- PostgreSQL" />
-                    <ListItemText primary="- MSSQL" />
-                    <ListItemText primary="- React Native" />
-                    <ListItemText primary="- Python" />
-                  </Typography>
+              <ListItemIcon>
+                <GitHubIcon />
+              </ListItemIcon>
+              <ListItemText>
+                <a href="https://github.com/MuhammadMoiz200099">
+                  https://github.com/MuhammadMoiz200099
+                </a>
+              </ListItemText>
+            </ListItem>
+            <ListItem disablePadding>
+              <ListItemIcon>
+                <PublicIcon />
+              </ListItemIcon>
+              <ListItemText>
+                <a href="https://github.com/MuhammadMoiz200099/profile">
+                  https://github.com/MuhammadMoiz200099/profile
+                </a>
+              </ListItemText>
+            </ListItem>
+            <ListItem disablePadding>
+              <ListItemIcon>
+                <CodeIcon />
+              </ListItemIcon>
+              <ListItemText>
+                <a href="https://www.hackerrank.com/JerryMMoiz2000">
+                  https://www.hackerrank.com/JerryMMoiz2000
+                </a>
+              </ListItemText>
+            </ListItem>
+            <ListItem disablePadding>
+              <ListItemIcon>
+                <AlignVerticalBottomIcon />
+              </ListItemIcon>
+              <ListItemText primary="Expericens: 4 years professional working experices" />
+            </ListItem>
+            <ListItem
+              disablePadding
+              sx={{ display: "flex", alignItems: "flex-start" }}
+            >
+              <ListItemIcon>
+                <AlignVerticalBottomIcon />
+              </ListItemIcon>
+              <Typography sx={{ display: "flex", flexDirection: "column" }}>
+                <ListItemText primary="Experties: " />
+                <Typography sx={{ pl: 3 }}>
+                  <ListItemText primary="- Javascript" />
+                  <ListItemText primary="- Typescript" />
+                  <ListItemText primary="- React JS" />
+                  <ListItemText primary="- Angular JS" />
+                  <ListItemText primary="- Node JS" />
+                  <ListItemText primary="- Nest JS" />
+                  <ListItemText primary="- Mongo DB" />
+                  <ListItemText primary="- PostgreSQL" />
+                  <ListItemText primary="- MSSQL" />
+                  <ListItemText primary="- React Native" />
+                  <ListItemText primary="- Python" />
                 </Typography>
-              </ListItemButton>
+              </Typography>
             </ListItem>
           </List>
         </Typography>
+      </Typography>
+      <Typography>
+        <img src={MYPIC} alt="my pic" height={500} width={400} loading="lazy" />
       </Typography>
     </Box>
   );

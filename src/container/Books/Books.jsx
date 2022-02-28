@@ -28,8 +28,13 @@ const Books = () => {
 
   return (
     <Box sx={{ mb: 10 }}>
-      <Typography sx={{ pb: 4 }}>
+      <Typography sx={{ pb: 1 }}>
         <h2>Books Record Table</h2>
+      </Typography>
+      <Typography>
+        <p style={{ color: 'red' }}>
+          *Note: Click on the table row to view / update the book record.
+        </p>
       </Typography>
       {books && books.length ? (
         <Box>
